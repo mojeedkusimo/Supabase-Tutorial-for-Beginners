@@ -1,11 +1,15 @@
 import supabase from "../config/supabaseClient"
+import { useEffect, useState } from "react"
+import { useParams, useNavigate } from 'react-router-dom'
 
 const Update = () => {
-	console.log(supabase)
+
+  const { id } = useParams()
+  const navigate = useNavigate()
 
   return (
     <div className="page update">
-      <h2>Update</h2>
+      <h2>Update - {id} </h2>
     </div>
   )
 }
